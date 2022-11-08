@@ -164,7 +164,7 @@
     <LoadNewDataComponent />
     <div style={{width: "400px"}}>
         <Doughnut
-            redraw={true}
+            redraw={false}
             data={adaptedChartData}
             options={chartOptions_3_6}
             plugins={[chartplugin]}
