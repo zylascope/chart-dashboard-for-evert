@@ -1,4 +1,5 @@
-/** chart-dashboard - https://codesandbox.io/s/chart-dashboard-1437fq - by Geoff Williams Copyright 2019-2022 THRIVE Project
+/** chart-dashboard-for-evert - https://github.com/zylascope/chart-dashboard-for-evert
+ * by Geoff Williams Copyright 2019-2022 THRIVE Project
  *
  * ---Description ---
  * A dashboard that uses react-chartjs-2 doughtnut chart with a custom plugin.
@@ -164,7 +165,7 @@
     <LoadNewDataComponent />
     <div style={{width: "400px"}}>
         <Doughnut
-            redraw={false}
+            redraw={true}
             data={adaptedChartData}
             options={chartOptions_3_6}
             plugins={[chartplugin]}
