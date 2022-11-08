@@ -152,32 +152,34 @@
    }
  
    return (
-     <>
-       <Grid
-         legendScreenSize="desktop"
-         chartRef={chartRef}
-         data={adaptedChartData}
-         TopicIsVisible={TopicIsVisible}
-         setTopicVisibility={setTopicVisibility}
-         toggleTopicVisibility={toggleTopicVisibility}
-       />
-       <LoadNewDataComponent />
-       <Doughnut
-         redraw={false}
-         data={adaptedChartData}
-         options={chartOptions_3_6}
-         plugins={[chartplugin]}
-         ref={chartRef}
-       />
-       <CustomLegend
-         legendScreenSize="desktop"
-         chartRef={chartRef}
-         data={adaptedChartData}
-         TopicIsVisible={TopicIsVisible}
-         setTopicVisibility={setTopicVisibility}
-         toggleTopicVisibility={toggleTopicVisibility}
-       />
-     </>
+    <>
+    <Grid
+        legendScreenSize="desktop"
+        chartRef={chartRef}
+        data={adaptedChartData}
+        TopicIsVisible={TopicIsVisible}
+        setTopicVisibility={setTopicVisibility}
+        toggleTopicVisibility={toggleTopicVisibility}
+    />
+    <LoadNewDataComponent />
+    <div style={{width: "400px"}}>
+        <Doughnut
+            redraw={true}
+            data={adaptedChartData}
+            options={chartOptions_3_6}
+            plugins={[chartplugin]}
+            ref={chartRef}
+        />
+    </div>
+    <CustomLegend
+        legendScreenSize="desktop"
+        chartRef={chartRef}
+        data={adaptedChartData}
+        TopicIsVisible={TopicIsVisible}
+        setTopicVisibility={setTopicVisibility}
+        toggleTopicVisibility={toggleTopicVisibility}
+    />
+    </>
    );
  }
  
